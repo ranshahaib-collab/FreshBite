@@ -1,0 +1,3114 @@
+     <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreshBite Premium Food Delivery Business Plan">
+    <title>FreshBite | Premium Business Plan</title>
+
+<style>
+    /* =========================================================
+       FRESHBITE PREMIUM BUSINESS WEBSITE
+       HTML + CSS IN ONE FILE
+    ========================================================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+            radial-gradient(circle at 10% 10%, rgba(212,175,55,0.10), transparent 25%),
+            radial-gradient(circle at 90% 20%, rgba(0,160,120,0.10), transparent 25%),
+            #07130f;
+        color: #f4f4f4;
+        line-height: 1.7;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+        --gold: #d4af37;
+        --gold-light: #f4d77d;
+        --green: #0d3b2e;
+        --green-light: #145b45;
+        --dark: #07130f;
+        --dark-2: #0b1d17;
+        --card: rgba(255,255,255,0.055);
+        --border: rgba(212,175,55,0.25);
+        --white: #ffffff;
+        --muted: #b8c2bd;
+    }
+
+    /* =========================================================
+       SCROLLBAR
+    ========================================================= */
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #06100c;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 20px;
+    }
+
+    /* =========================================================
+       TOP BAR
+    ========================================================= */
+
+    .top-bar {
+        background: #040b08;
+        border-bottom: 1px solid rgba(212,175,55,0.18);
+        padding: 10px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: #c8d0cc;
+    }
+
+    .top-bar span {
+        color: var(--gold-light);
+    }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+        min-height: 720px;
+        position: relative;
+        overflow: hidden;
+        background:
+            linear-gradient(rgba(4,18,13,0.78), rgba(4,18,13,0.92)),
+            linear-gradient(135deg, #0d3b2e, #06120d);
+        border-bottom: 1px solid var(--border);
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(212,175,55,0.15);
+        border-radius: 50%;
+        top: -150px;
+        right: -120px;
+        box-shadow:
+            0 0 0 40px rgba(212,175,55,0.03),
+            0 0 0 80px rgba(212,175,55,0.02);
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(212,175,55,0.06);
+        bottom: -150px;
+        left: -100px;
+        filter: blur(4px);
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navbar {
+        width: 90%;
+        max-width: 1400px;
+        margin: auto;
+        padding: 22px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--gold), #9d771c);
+        color: #111;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 10px 30px rgba(212,175,55,0.18);
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+        color: var(--white);
+        letter-spacing: 1px;
+    }
+
+    .logo-text p {
+        color: var(--gold-light);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding: 9px 13px;
+        border-radius: 30px;
+        color: #d6ded9;
+        font-size: 13px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: rgba(212,175,55,0.12);
+        color: var(--gold-light);
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+        width: 90%;
+        max-width: 1400px;
+        margin: 55px auto 0;
+        position: relative;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 780px;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid rgba(212,175,55,0.35);
+        border-radius: 50px;
+        color: var(--gold-light);
+        background: rgba(212,175,55,0.06);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 22px;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 6vw, 82px);
+        line-height: 1.02;
+        margin-bottom: 25px;
+        letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+        color: var(--gold);
+    }
+
+    .hero-description {
+        color: #c4cfca;
+        font-size: 18px;
+        max-width: 680px;
+        margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 12px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--gold), #a47c1d);
+        color: #101510;
+        box-shadow: 0 12px 30px rgba(212,175,55,0.16);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+        border: 1px solid rgba(255,255,255,0.16);
+        background: rgba(255,255,255,0.04);
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--gold);
+        color: var(--gold-light);
+    }
+
+    /* =========================================================
+       HERO CARD
+    ========================================================= */
+
+    .hero-card {
+        background:
+            linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.025));
+        border: 1px solid rgba(212,175,55,0.25);
+        border-radius: 28px;
+        padding: 30px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+    }
+
+    .hero-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .hero-card-top span:first-child {
+        color: var(--gold-light);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .status {
+        padding: 6px 10px;
+        border-radius: 30px;
+        background: rgba(71,190,133,0.12);
+        color: #79e5ad;
+        font-size: 11px;
+    }
+
+    .hero-price {
+        font-size: 46px;
+        color: var(--gold);
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .hero-card p {
+        color: var(--muted);
+    }
+
+    .mini-line {
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        margin: 24px 0;
+    }
+
+    .hero-list li {
+        padding: 8px 0;
+        color: #d0d8d4;
+        font-size: 14px;
+    }
+
+    .hero-list li::before {
+        content: "✓";
+        color: var(--gold);
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    /* =========================================================
+       STATS
+    ========================================================= */
+
+    .stats {
+        width: 90%;
+        max-width: 1300px;
+        margin: -45px auto 80px;
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 25px;
+        text-align: center;
+        background: rgba(10,29,22,0.96);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.22);
+        transition: 0.3s;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-7px);
+        border-color: rgba(212,175,55,0.55);
+    }
+
+    .stat-number {
+        color: var(--gold);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .stat-card p {
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+    /* =========================================================
+       MAIN
+    ========================================================= */
+
+    main {
+        width: 90%;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .section {
+        margin-bottom: 100px;
+        scroll-margin-top: 30px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-tag {
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(30px, 4vw, 48px);
+        margin-bottom: 12px;
+    }
+
+    .section-heading p {
+        color: var(--muted);
+        max-width: 800px;
+    }
+
+    /* =========================================================
+       INTRO GRID
+    ========================================================= */
+
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .glass-card {
+        background: var(--card);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 22px;
+        padding: 30px;
+        transition: 0.3s;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(212,175,55,0.3);
+        background: rgba(255,255,255,0.07);
+    }
+
+    .glass-card h3 {
+        color: var(--gold-light);
+        margin-bottom: 15px;
+        font-size: 21px;
+    }
+
+    .glass-card p {
+        color: #c0cac5;
+    }
+
+    .highlight-box {
+        border-left: 3px solid var(--gold);
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+
+    /* =========================================================
+       FEATURE GRID
+    ========================================================= */
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 27px;
+        border-radius: 20px;
+        background:
+            linear-gradient(145deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025));
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(212,175,55,0.10);
+        border: 1px solid rgba(212,175,55,0.22);
+        color: var(--gold);
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .feature-card p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    /* =========================================================
+       LOCATION
+    ========================================================= */
+
+    .location-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .location-card {
+        min-height: 260px;
+        border-radius: 25px;
+        padding: 35px;
+        background:
+            linear-gradient(135deg, rgba(13,59,46,0.75), rgba(6,18,13,0.9));
+        border: 1px solid var(--border);
+    }
+
+    .location-card h3 {
+        font-size: 27px;
+        color: var(--gold-light);
+        margin-bottom: 18px;
+    }
+
+    .location-list li {
+        margin: 12px 0;
+        color: #c9d2ce;
+    }
+
+    .location-list li::before {
+        content: "◆";
+        color: var(--gold);
+        margin-right: 10px;
+        font-size: 9px;
+    }
+
+    /* =========================================================
+       PRICING
+    ========================================================= */
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .price-card {
+        border-radius: 24px;
+        padding: 30px;
+        background: linear-gradient(145deg, #10261e, #091812);
+        border: 1px solid rgba(255,255,255,0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .price-card.featured {
+        border-color: rgba(212,175,55,0.5);
+        transform: translateY(-8px);
+    }
+
+    .featured-label {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--gold);
+        color: #111;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .price-card h3 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        color: var(--gold);
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .price span {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: normal;
+    }
+
+    .price-card p {
+        color: var(--muted);
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .price-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        color: #cbd4d0;
+        font-size: 13px;
+    }
+
+    .price-list li:last-child {
+        border-bottom: none;
+    }
+
+    .price-list li::before {
+        content: "✓";
+        color: var(--gold);
+        margin-right: 8px;
+    }
+
+    /* =========================================================
+       TABLE
+    ========================================================= */
+
+    .table-wrapper {
+        overflow-x: auto;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 700px;
+        background: rgba(255,255,255,0.025);
+    }
+
+    th {
+        background: #102b21;
+        color: var(--gold-light);
+        text-align: left;
+        padding: 17px;
+        font-size: 14px;
+    }
+
+    td {
+        padding: 16px;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        color: #cbd4d0;
+        font-size: 14px;
+    }
+
+    tr:hover td {
+        background: rgba(212,175,55,0.035);
+    }
+
+    .money {
+        color: var(--gold-light);
+        font-weight: bold;
+    }
+
+    /* =========================================================
+       TARGET AUDIENCE
+    ========================================================= */
+
+    .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .audience-card {
+        padding: 25px;
+        text-align: center;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.045);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .audience-card .big {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .audience-card h3 {
+        color: var(--gold-light);
+        margin-bottom: 8px;
+    }
+
+    .audience-card p {
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+    /* =========================================================
+       MARKETING
+    ========================================================= */
+
+    .marketing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .marketing-card {
+        padding: 30px;
+        border-radius: 22px;
+        background:
+            linear-gradient(145deg, rgba(13,59,46,0.65), rgba(255,255,255,0.025));
+        border: 1px solid rgba(212,175,55,0.14);
+    }
+
+    .marketing-card h3 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .marketing-card p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    /* =========================================================
+       SWOT
+    ========================================================= */
+
+    .swot-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .swot {
+        padding: 30px;
+        border-radius: 22px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .swot h3 {
+        color: var(--gold);
+        margin-bottom: 15px;
+    }
+
+    .swot li {
+        color: #c6cfcb;
+        padding: 7px 0;
+    }
+
+    .swot li::before {
+        content: "•";
+        color: var(--gold);
+        font-size: 20px;
+        margin-right: 9px;
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+    }
+
+    .process-step {
+        text-align: center;
+        padding: 25px 15px;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.035);
+    }
+
+    .process-number {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gold);
+        color: #111;
+        font-weight: bold;
+    }
+
+    .process-step h3 {
+        color: white;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .process-step p {
+        color: var(--muted);
+        font-size: 12px;
+    }
+
+    /* =========================================================
+       FINANCE HIGHLIGHT
+    ========================================================= */
+
+    .finance-box {
+        padding: 45px;
+        border-radius: 28px;
+        background:
+            linear-gradient(135deg, rgba(13,59,46,0.95), rgba(7,19,15,0.95));
+        border: 1px solid rgba(212,175,55,0.28);
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .finance-box h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .finance-box p {
+        color: #c0cbc6;
+    }
+
+    .finance-numbers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .finance-item {
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .finance-item span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .finance-item strong {
+        color: var(--gold-light);
+        font-size: 21px;
+    }
+
+    /* =========================================================
+       RISK
+    ========================================================= */
+
+    .risk-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .risk-card {
+        padding: 27px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .risk-card h3 {
+        color: var(--gold-light);
+        margin-bottom: 10px;
+    }
+
+    .risk-card p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    /* =========================================================
+       FUTURE
+    ========================================================= */
+
+    .future-box {
+        padding: 40px;
+        border-radius: 25px;
+        background:
+            radial-gradient(circle at top right, rgba(212,175,55,0.13), transparent 30%),
+            rgba(255,255,255,0.04);
+        border: 1px solid rgba(212,175,55,0.18);
+    }
+
+    .future-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .future-list div {
+        padding: 18px;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.04);
+        color: #d0d8d4;
+    }
+
+    .future-list div::before {
+        content: "→";
+        color: var(--gold);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 35px;
+        border-radius: 24px;
+        background: rgba(255,255,255,0.045);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-card h3 {
+        color: var(--gold-light);
+        margin-bottom: 18px;
+    }
+
+    .contact-info p {
+        color: #c7d0cc;
+        padding: 7px 0;
+    }
+
+    .contact-info strong {
+        color: white;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+        margin-top: 70px;
+        padding: 55px 6% 25px;
+        background: #040b08;
+        border-top: 1px solid rgba(212,175,55,0.16);
+    }
+
+    .footer-grid {
+        max-width: 1400px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    footer h3 {
+        color: var(--gold-light);
+        margin-bottom: 15px;
+    }
+
+    footer p,
+    footer li {
+        color: #9eaaa4;
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    .footer-bottom {
+        max-width: 1400px;
+        margin: auto;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255,255,255,0.07);
+        text-align: center;
+        color: #77827d;
+        font-size: 12px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1100px) {
+
+        .hero {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-card {
+            max-width: 650px;
+        }
+
+        .stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .feature-grid,
+        .marketing-grid,
+        .risk-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .audience-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .process {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        .top-bar {
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+        }
+
+        .navbar {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        nav ul {
+            justify-content: center;
+        }
+
+        header {
+            min-height: auto;
+            padding-bottom: 100px;
+        }
+
+        .hero {
+            margin-top: 35px;
+        }
+
+        .intro-grid,
+        .location-grid,
+        .finance-box,
+        .contact-section {
+            grid-template-columns: 1fr;
+        }
+
+        .pricing-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .price-card.featured {
+            transform: none;
+        }
+
+        .swot-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .future-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .top-bar {
+            display: none;
+        }
+
+        .navbar,
+        .hero,
+        main {
+            width: 92%;
+        }
+
+        nav ul {
+            gap: 3px;
+        }
+
+        nav a {
+            font-size: 11px;
+            padding: 7px 8px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            letter-spacing: -2px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+        }
+
+        .stats {
+            width: 92%;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 65px;
+        }
+
+        .stat-card {
+            padding: 18px 10px;
+        }
+
+        .stat-number {
+            font-size: 23px;
+        }
+
+        .feature-grid,
+        .marketing-grid,
+        .risk-grid,
+        .audience-grid,
+        .process {
+            grid-template-columns: 1fr;
+        }
+
+        .section {
+            margin-bottom: 70px;
+        }
+
+        .glass-card,
+        .location-card,
+        .price-card,
+        .marketing-card,
+        .risk-card {
+            padding: 23px;
+        }
+
+        .finance-box {
+            padding: 28px;
+        }
+
+        .finance-box h2 {
+            font-size: 30px;
+        }
+
+        .finance-numbers {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* =========================================================
+       PRINT
+    ========================================================= */
+
+    @media print {
+
+        body {
+            background: white;
+            color: black;
+        }
+
+        header {
+            min-height: auto;
+            background: white;
+            color: black;
+        }
+
+        nav,
+        .hero-buttons,
+        .top-bar {
+            display: none;
+        }
+
+        .hero {
+            display: block;
+        }
+
+        .hero h1,
+        .section-heading h2,
+        h2,
+        h3 {
+            color: black;
+        }
+
+        .hero-description,
+        p,
+        li,
+        td {
+            color: #222;
+        }
+
+        .glass-card,
+        .feature-card,
+        .price-card,
+        .marketing-card,
+        .risk-card,
+        .location-card,
+        .contact-card {
+            background: white;
+            border: 1px solid #ccc;
+            color: black;
+            box-shadow: none;
+        }
+
+        footer {
+            background: white;
+            color: black;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP BAR
+========================================================== -->
+
+<div class="top-bar">
+    <div>Premium Business Plan • <span>FreshBite Food Delivery</span></div>
+    <div>Prepared for Academic Business Project</div>
+</div>
+
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#" class="logo">
+
+            <div class="logo-icon">F</div>
+
+            <div class="logo-text">
+                <h2>FreshBite</h2>
+                <p>Premium Food Delivery</p>
+            </div>
+
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#investment">Investment</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#audience">Audience</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+                <li><a href="#profit">Profit</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                Modern Business Plan • 2026
+            </span>
+
+            <h1>
+                Fresh Food.
+                <span>Smart Business.</span>
+            </h1>
+
+            <p class="hero-description">
+                FreshBite is a modern food delivery business designed
+                to provide fresh, affordable and convenient meals to
+                students, professionals, families and busy customers.
+                Our business combines quality food, technology,
+                customer service and efficient delivery.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#concept" class="btn btn-primary">
+                    Explore Business Plan
+                </a>
+
+                <a href="#profit" class="btn btn-secondary">
+                    View Financial Plan
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-top">
+                <span>Business Snapshot</span>
+                <span class="status">Ready to Launch</span>
+            </div>
+
+            <div class="hero-price">
+                Rs. 1.5M
+            </div>
+
+            <p>
+                Estimated starting investment
+            </p>
+
+            <div class="mini-line"></div>
+
+            <ul class="hero-list">
+                <li>Online food ordering system</li>
+                <li>Fresh meal preparation</li>
+                <li>Local delivery network</li>
+                <li>Student & family meal plans</li>
+                <li>Digital marketing strategy</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     STATS
+========================================================== -->
+
+<section class="stats">
+
+    <div class="stat-card">
+        <div class="stat-number">25+</div>
+        <p>Meal Options</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">30 Min</div>
+        <p>Target Delivery</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">7 Days</div>
+        <p>Weekly Service</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">Rs. 1.5M</div>
+        <p>Estimated Startup</p>
+    </div>
+
+</section>
+
+
+<main>
+
+    <!-- =====================================================
+         BUSINESS CONCEPT
+    ====================================================== -->
+
+    <section class="section" id="concept">
+
+        <div class="section-heading">
+            <div class="section-tag">01 • Business Idea</div>
+
+            <h2>Business Idea & Concept</h2>
+
+            <p>
+                FreshBite is designed as a technology-supported food
+                delivery company that focuses on convenience,
+                affordability, freshness and customer satisfaction.
+            </p>
+        </div>
+
+
+        <div class="intro-grid">
+
+            <div class="glass-card">
+
+                <h3>Our Core Idea</h3>
+
+                <p>
+                    The main idea of FreshBite is to prepare fresh meals
+                    and deliver them directly to customers. Customers
+                    can select meals according to their taste, budget
+                    and daily requirements.
+                </p>
+
+                <div class="highlight-box">
+                    <p>
+                        Our goal is to make ordering quality food
+                        simple, fast and affordable.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="glass-card">
+
+                <h3>Business Vision</h3>
+
+                <p>
+                    FreshBite aims to become a trusted local food
+                    delivery brand known for reliable service,
+                    hygienic food preparation, reasonable pricing
+                    and a strong customer relationship.
+                </p>
+
+                <div class="highlight-box">
+                    <p>
+                        Long-term vision: expand into multiple cities
+                        through a scalable delivery model.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Products & Services
+            </div>
+
+            <h2>What FreshBite Offers</h2>
+
+            <p>
+                The business will provide different food categories
+                so customers can choose meals according to their
+                lifestyle and budget.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🍔</div>
+                <h3>Fast Meals</h3>
+                <p>
+                    Burgers, sandwiches, wraps and other quick meals
+                    for customers who need convenient food.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🍱</div>
+                <h3>Lunch Boxes</h3>
+                <p>
+                    Affordable lunch packages designed for students
+                    and office workers.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🥗</div>
+                <h3>Healthy Meals</h3>
+                <p>
+                    Fresh salads, balanced meals and lighter food
+                    options for health-conscious customers.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👨‍👩‍👧</div>
+                <h3>Family Deals</h3>
+                <p>
+                    Larger meal bundles designed for families and
+                    small gatherings.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">☕</div>
+                <h3>Drinks & Snacks</h3>
+                <p>
+                    Beverages, desserts and snacks can be added to
+                    increase customer convenience.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Meal Subscription</h3>
+                <p>
+                    Weekly and monthly meal plans for regular customers
+                    who want predictable food delivery.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOCATION
+    ====================================================== -->
+
+    <section class="section" id="location">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                02 • Business Location
+            </div>
+
+            <h2>Business Location</h2>
+
+            <p>
+                The proposed business should operate from an area with
+                high population density and easy access to customers.
+            </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+            <div class="location-card">
+
+                <h3>Recommended Area</h3>
+
+                <ul class="location-list">
+
+                    <li>Near universities and colleges</li>
+                    <li>Close to office areas</li>
+                    <li>Residential neighborhoods nearby</li>
+                    <li>Easy road access for delivery riders</li>
+                    <li>Availability of commercial kitchen space</li>
+                    <li>Reasonable monthly rent</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <h3>Why This Location?</h3>
+
+                <ul class="location-list">
+
+                    <li>Large number of potential customers</li>
+                    <li>High demand during lunch hours</li>
+                    <li>Strong evening food demand</li>
+                    <li>Shorter delivery distances</li>
+                    <li>Lower transportation cost</li>
+                    <li>Opportunity for repeat customers</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INVESTMENT
+    ====================================================== -->
+
+    <section class="section" id="investment">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                03 • Investment & Costing
+            </div>
+
+            <h2>Initial Investment Plan</h2>
+
+            <p>
+                The following estimated budget shows how the startup
+                capital can be allocated across the major business needs.
+            </p>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Investment Area</th>
+                        <th>Description</th>
+                        <th>Estimated Cost</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Kitchen Equipment</td>
+                        <td>Cooking and food preparation equipment</td>
+                        <td class="money">Rs. 450,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shop/Kitchen Setup</td>
+                        <td>Furniture, counters and basic renovation</td>
+                        <td class="money">Rs. 250,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Delivery Setup</td>
+                        <td>Delivery bags and initial rider support</td>
+                        <td class="money">Rs. 180,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Website & Ordering System</td>
+                        <td>Online ordering and digital setup</td>
+                        <td class="money">Rs. 120,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Branding</td>
+                        <td>Logo, packaging and promotional material</td>
+                        <td class="money">Rs. 100,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Initial Inventory</td>
+                        <td>Food ingredients and packaging material</td>
+                        <td class="money">Rs. 150,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Marketing Launch</td>
+                        <td>Social media and promotional campaigns</td>
+                        <td class="money">Rs. 100,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Emergency Reserve</td>
+                        <td>Unexpected startup expenses</td>
+                        <td class="money">Rs. 150,000</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>Estimated Startup Investment</strong></td>
+                        <td class="money"><strong>Rs. 1,500,000</strong></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRICING
+    ====================================================== -->
+
+    <section class="section" id="pricing">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                04 • Product Pricing
+            </div>
+
+            <h2>Product & Service Pricing</h2>
+
+            <p>
+                Prices are designed to remain competitive while
+                maintaining reasonable profit margins.
+            </p>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+
+                <h3>Student Meal</h3>
+
+                <div class="price">
+                    Rs. 350
+                    <span>/ meal</span>
+                </div>
+
+                <p>
+                    Affordable meal package for students.
+                </p>
+
+                <ul class="price-list">
+                    <li>Main meal</li>
+                    <li>Small drink</li>
+                    <li>Standard packaging</li>
+                    <li>Affordable delivery options</li>
+                </ul>
+
+            </div>
+
+
+            <div class="price-card featured">
+
+                <div class="featured-label">
+                    Popular
+                </div>
+
+                <h3>Premium Meal</h3>
+
+                <div class="price">
+                    Rs. 650
+                    <span>/ meal</span>
+                </div>
+
+                <p>
+                    Complete premium meal for professionals.
+                </p>
+
+                <ul class="price-list">
+                    <li>Premium main course</li>
+                    <li>Side item</li>
+                    <li>Drink</li>
+                    <li>Premium packaging</li>
+                </ul>
+
+            </div>
+
+
+            <div class="price-card">
+
+                <h3>Family Deal</h3>
+
+                <div class="price">
+                    Rs. 1,800
+                    <span>/ package</span>
+                </div>
+
+                <p>
+                    Family package designed for multiple people.
+                </p>
+
+                <ul class="price-list">
+                    <li>Multiple main meals</li>
+                    <li>Side dishes</li>
+                    <li>Drinks</li>
+                    <li>Family-size packaging</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TARGET AUDIENCE
+    ====================================================== -->
+
+    <section class="section" id="audience">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                05 • Target Audience
+            </div>
+
+            <h2>Who Are Our Customers?</h2>
+
+            <p>
+                FreshBite will focus on customer groups that regularly
+                purchase prepared food and value convenience.
+            </p>
+
+        </div>
+
+
+        <div class="audience-grid">
+
+            <div class="audience-card">
+                <div class="big">🎓</div>
+                <h3>Students</h3>
+                <p>
+                    Affordable meals for students with limited budgets.
+                </p>
+            </div>
+
+            <div class="audience-card">
+                <div class="big">💼</div>
+                <h3>Professionals</h3>
+                <p>
+                    Quick lunch and dinner options for office workers.
+                </p>
+            </div>
+
+            <div class="audience-card">
+                <div class="big">🏠</div>
+                <h3>Families</h3>
+                <p>
+                    Convenient family meal packages for homes.
+                </p>
+            </div>
+
+            <div class="audience-card">
+                <div class="big">⏱️</div>
+                <h3>Busy People</h3>
+                <p>
+                    Customers who have limited time for cooking.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MARKETING
+    ====================================================== -->
+
+    <section class="section" id="marketing">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                06 • Marketing Strategy
+            </div>
+
+            <h2>Marketing & Promotion</h2>
+
+            <p>
+                FreshBite will use digital marketing and local
+                promotional activities to build brand awareness.
+            </p>
+
+        </div>
+
+
+        <div class="marketing-grid">
+
+            <div class="marketing-card">
+
+                <h3>Social Media Marketing</h3>
+
+                <p>
+                    Regular posts, short videos, food photography,
+                    customer reviews and promotional offers will be
+                    used to attract customers.
+                </p>
+
+            </div>
+
+
+            <div class="marketing-card">
+
+                <h3>Influencer Promotion</h3>
+
+                <p>
+                    Local content creators can be invited to review
+                    meals and introduce FreshBite to their audiences.
+                </p>
+
+            </div>
+
+
+            <div class="marketing-card">
+
+                <h3>Student Discounts</h3>
+
+                <p>
+                    Special student offers can increase order volume
+                    during lunch and evening hours.
+                </p>
+
+            </div>
+
+
+            <div class="marketing-card">
+
+                <h3>Referral Program</h3>
+
+                <p>
+                    Existing customers can receive rewards when they
+                    introduce new customers to FreshBite.
+                </p>
+
+            </div>
+
+
+            <div class="marketing-card">
+
+                <h3>Opening Campaign</h3>
+
+                <p>
+                    Launch-week discounts and free-delivery offers
+                    can encourage customers to try the service.
+                </p>
+
+            </div>
+
+
+            <div class="marketing-card">
+
+                <h3>Loyalty Program</h3>
+
+                <p>
+                    Repeat customers can earn points and receive
+                    discounts on future purchases.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CUSTOMER PROCESS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Customer Experience
+            </div>
+
+            <h2>How The Business Works</h2>
+
+            <p>
+                The complete customer journey is designed to be simple,
+                fast and convenient.
+            </p>
+
+        </div>
+
+
+        <div class="process">
+
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <h3>Browse</h3>
+                <p>Customer views available meals.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <h3>Order</h3>
+                <p>Customer selects products.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <h3>Prepare</h3>
+                <p>Kitchen prepares fresh food.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <h3>Deliver</h3>
+                <p>Rider delivers the order.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="process-number">5</div>
+                <h3>Review</h3>
+                <p>Customer provides feedback.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SWOT
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Business Analysis
+            </div>
+
+            <h2>SWOT Analysis</h2>
+
+            <p>
+                SWOT analysis helps identify internal capabilities
+                and external business conditions.
+            </p>
+
+        </div>
+
+
+        <div class="swot-grid">
+
+            <div class="swot">
+
+                <h3>Strengths</h3>
+
+                <ul>
+                    <li>Convenient online ordering</li>
+                    <li>Fresh food preparation</li>
+                    <li>Multiple customer segments</li>
+                    <li>Affordable meal options</li>
+                    <li>Strong digital marketing potential</li>
+                </ul>
+
+            </div>
+
+
+            <div class="swot">
+
+                <h3>Weaknesses</h3>
+
+                <ul>
+                    <li>Initial setup cost</li>
+                    <li>Dependence on delivery operations</li>
+                    <li>Need for consistent food quality</li>
+                    <li>New brand recognition</li>
+                    <li>Limited initial service area</li>
+                </ul>
+
+            </div>
+
+
+            <div class="swot">
+
+                <h3>Opportunities</h3>
+
+                <ul>
+                    <li>Growing online food ordering</li>
+                    <li>Meal subscription services</li>
+                    <li>Corporate meal packages</li>
+                    <li>Expansion into new areas</li>
+                    <li>Partnerships with local organizations</li>
+                </ul>
+
+            </div>
+
+
+            <div class="swot">
+
+                <h3>Threats</h3>
+
+                <ul>
+                    <li>Competition from existing businesses</li>
+                    <li>Ingredient price changes</li>
+                    <li>Delivery delays</li>
+                    <li>Customer preference changes</li>
+                    <li>Operational disruptions</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OPERATIONS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Business Operations
+            </div>
+
+            <h2>Daily Operations Plan</h2>
+
+            <p>
+                Efficient operations are important for maintaining
+                food quality, delivery speed and customer satisfaction.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🍳</div>
+                <h3>Food Preparation</h3>
+                <p>
+                    Meals will be prepared using standard recipes,
+                    hygiene procedures and quality checks.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Order Management</h3>
+                <p>
+                    Orders will be organized according to preparation
+                    time, location and customer requirements.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚴</div>
+                <h3>Delivery</h3>
+                <p>
+                    Delivery staff will receive orders and follow
+                    efficient routes to reduce delays.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFIT & LOSS
+    ====================================================== -->
+
+    <section class="section" id="profit">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                07 • Profit & Loss
+            </div>
+
+            <h2>Profit & Loss Estimation</h2>
+
+            <p>
+                The following figures are planning estimates and can
+                change according to actual sales, costs and operating
+                conditions.
+            </p>
+
+        </div>
+
+
+        <div class="finance-box">
+
+            <div>
+
+                <h2>Monthly Business Projection</h2>
+
+                <p>
+                    If FreshBite receives an average of 80 orders per
+                    day with an average order value of Rs. 500, the
+                    estimated monthly revenue can be calculated from
+                    daily order volume.
+                </p>
+
+            </div>
+
+
+            <div class="finance-numbers">
+
+                <div class="finance-item">
+                    <span>Daily Orders</span>
+                    <strong>80</strong>
+                </div>
+
+                <div class="finance-item">
+                    <span>Average Order</span>
+                    <strong>Rs. 500</strong>
+                </div>
+
+                <div class="finance-item">
+                    <span>Estimated Revenue</span>
+                    <strong>Rs. 1.2M</strong>
+                </div>
+
+                <div class="finance-item">
+                    <span>Estimated Costs</span>
+                    <strong>Rs. 900K</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Financial Item</th>
+                        <th>Monthly Estimate</th>
+                        <th>Purpose</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Sales Revenue</td>
+                        <td class="money">Rs. 1,200,000</td>
+                        <td>Total estimated sales</td>
+                    </tr>
+
+                    <tr>
+                        <td>Food Ingredients</td>
+                        <td class="money">Rs. 400,000</td>
+                        <td>Raw materials</td>
+                    </tr>
+
+                    <tr>
+                        <td>Staff Expenses</td>
+                        <td class="money">Rs. 180,000</td>
+                        <td>Kitchen and support staff</td>
+                    </tr>
+
+                    <tr>
+                        <td>Delivery Expenses</td>
+                        <td class="money">Rs. 120,000</td>
+                        <td>Delivery operations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rent & Utilities</td>
+                        <td class="money">Rs. 100,000</td>
+                        <td>Premises and utilities</td>
+                    </tr>
+
+                    <tr>
+                        <td>Marketing</td>
+                        <td class="money">Rs. 50,000</td>
+                        <td>Advertising</td>
+                    </tr>
+
+                    <tr>
+                        <td>Other Expenses</td>
+                        <td class="money">Rs. 50,000</td>
+                        <td>Miscellaneous expenses</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Estimated Net Profit</strong></td>
+                        <td class="money"><strong>Rs. 300,000</strong></td>
+                        <td><strong>Before applicable taxes and adjustments</strong></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RISKS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Risk Management
+            </div>
+
+            <h2>Business Risks & Solutions</h2>
+
+            <p>
+                Every business faces risks, so FreshBite will prepare
+                practical solutions for common operational challenges.
+            </p>
+
+        </div>
+
+
+        <div class="risk-grid">
+
+            <div class="risk-card">
+
+                <h3>Food Quality Risk</h3>
+
+                <p>
+                    Standard recipes, ingredient checks and regular
+                    hygiene inspections can help maintain consistency.
+                </p>
+
+            </div>
+
+
+            <div class="risk-card">
+
+                <h3>Delivery Delay</h3>
+
+                <p>
+                    Better route planning and delivery-zone management
+                    can reduce unnecessary delays.
+                </p>
+
+            </div>
+
+
+            <div class="risk-card">
+
+                <h3>High Competition</h3>
+
+                <p>
+                    FreshBite can focus on customer service, meal
+                    subscriptions and targeted local promotions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FUTURE GROWTH
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Future Growth
+            </div>
+
+            <h2>Expansion Strategy</h2>
+
+            <p>
+                After establishing a stable customer base, FreshBite
+                can gradually expand its products and service area.
+            </p>
+
+        </div>
+
+
+        <div class="future-box">
+
+            <h3>
+                Long-Term Business Development
+            </h3>
+
+            <p>
+                The future strategy focuses on improving technology,
+                increasing product variety, building partnerships and
+                entering additional markets.
+            </p>
+
+
+            <div class="future-list">
+
+                <div>
+                    Launch mobile ordering application
+                </div>
+
+                <div>
+                    Introduce corporate lunch subscriptions
+                </div>
+
+                <div>
+                    Expand delivery zones
+                </div>
+
+                <div>
+                    Add healthy meal plans
+                </div>
+
+                <div>
+                    Develop loyalty membership
+                </div>
+
+                <div>
+                    Open additional kitchen locations
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KEY GOALS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Performance Goals
+            </div>
+
+            <h2>Key Business Goals</h2>
+
+            <p>
+                These goals provide direction for the first stage
+                of business development.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🎯</div>
+
+                <h3>Customer Growth</h3>
+
+                <p>
+                    Build a strong base of repeat customers through
+                    reliable service and attractive offers.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">⭐</div>
+
+                <h3>Quality</h3>
+
+                <p>
+                    Maintain consistent food quality and customer
+                    satisfaction.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📈</div>
+
+                <h3>Revenue</h3>
+
+                <p>
+                    Increase monthly sales through new products,
+                    subscriptions and repeat orders.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div class="section-tag">
+                Contact & Identity
+            </div>
+
+            <h2>FreshBite Business Identity</h2>
+
+            <p>
+                A strong business identity helps customers recognize
+                and remember the brand.
+            </p>
+
+        </div>
+
+
+        <div class="contact-section">
+
+            <div class="contact-card">
+
+                <h3>Brand Information</h3>
+
+                <div class="contact-info">
+
+                    <p>
+                        <strong>Business:</strong>
+                        FreshBite Food Delivery
+                    </p>
+
+                    <p>
+                        <strong>Industry:</strong>
+                        Food & Delivery Services
+                    </p>
+
+                    <p>
+                        <strong>Business Model:</strong>
+                        Online Food Ordering
+                    </p>
+
+                    <p>
+                        <strong>Target Market:</strong>
+                        Students, professionals and families
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Business Objectives</h3>
+
+                <div class="contact-info">
+
+                    <p>
+                        <strong>Objective 01:</strong>
+                        Deliver quality meals.
+                    </p>
+
+                    <p>
+                        <strong>Objective 02:</strong>
+                        Maintain affordable prices.
+                    </p>
+
+                    <p>
+                        <strong>Objective 03:</strong>
+                        Build customer loyalty.
+                    </p>
+
+                    <p>
+                        <strong>Objective 04:</strong>
+                        Expand the business gradually.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>FreshBite</h3>
+
+            <p>
+                A modern food delivery business concept focused on
+                fresh meals, convenient ordering and customer service.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Business Plan</h3>
+
+            <ul>
+                <li>Business Concept</li>
+                <li>Investment Plan</li>
+                <li>Pricing Strategy</li>
+                <li>Marketing Plan</li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Customer Focus</h3>
+
+            <ul>
+                <li>Students</li>
+                <li>Professionals</li>
+                <li>Families</li>
+                <li>Busy Customers</li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Core Values</h3>
+
+            <ul>
+                <li>Freshness</li>
+                <li>Quality</li>
+                <li>Convenience</li>
+                <li>Customer Satisfaction</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 FreshBite Food Delivery • Business Plan Project
+
+    </div>
+
+</footer>
+     </footer>
+     <script>
+
+/* =========================================================
+   FRESHBITE PREMIUM BUSINESS WEBSITE
+   Interactive JavaScript
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       1. NAVBAR ACTIVE LINK
+    ===================================================== */
+
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navLinks.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+        });
+
+    });
+
+
+    /* =====================================================
+       2. SMOOTH SCROLL
+    ===================================================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (targetId && targetId !== "#") {
+
+                const target = document.querySelector(targetId);
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       3. SCROLL REVEAL ANIMATION
+    ===================================================== */
+
+    const revealElements = document.querySelectorAll(
+        ".glass-card, .feature-card, .marketing-card, " +
+        ".swot, .finance-box, .finance-item, .location-card, " +
+        ".process-step, .contact-card, .price-card, " +
+        ".audience-card, .future-box, .stat-card"
+    );
+
+
+    revealElements.forEach(element => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(35px)";
+        element.style.transition =
+            "opacity 0.7s ease, transform 0.7s ease";
+
+    });
+
+
+    function revealOnScroll() {
+
+        revealElements.forEach(element => {
+
+            const position =
+                element.getBoundingClientRect().top;
+
+            if (position < window.innerHeight - 80) {
+
+                element.style.opacity = "1";
+                element.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    }
+
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
+
+    /* =====================================================
+       4. HEADER SHADOW
+    ===================================================== */
+
+    const header = document.querySelector("header");
+
+    if (header) {
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 40) {
+
+                header.style.boxShadow =
+                    "0 10px 35px rgba(0,0,0,0.45)";
+
+            } else {
+
+                header.style.boxShadow = "none";
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       5. PRICE CARD INTERACTION
+    ===================================================== */
+
+    const priceCards =
+        document.querySelectorAll(".price-card");
+
+    priceCards.forEach(card => {
+
+        card.addEventListener("click", function () {
+
+            const title =
+                this.querySelector("h3")?.textContent ||
+                "FreshBite Meal";
+
+            const price =
+                this.querySelector(".price")?.textContent.trim() ||
+                "";
+
+            alert(
+                "FRESHBITE\n\n" +
+                title +
+                "\n" +
+                price +
+                "\n\nFresh food. Smart business."
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       6. NUMBER COUNTER ANIMATION
+    ===================================================== */
+
+    const counterElements =
+        document.querySelectorAll(
+            ".hero-price, .stat-number, .finance-item strong"
+        );
+
+
+    function animateNumber(element) {
+
+        const originalText =
+            element.textContent.trim();
+
+        const numberMatch =
+            originalText
+                .replace(/,/g, "")
+                .match(/\d+(\.\d+)?/);
+
+        if (!numberMatch) return;
+
+        const number =
+            parseFloat(numberMatch[0]);
+
+        if (isNaN(number)) return;
+
+        let started = false;
+
+
+        const observer =
+            new IntersectionObserver(function (entries) {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting && !started) {
+
+                        started = true;
+
+                        let start = 0;
+
+                        const duration = 1200;
+
+                        const startTime =
+                            performance.now();
+
+
+                        function update(currentTime) {
+
+                            const progress =
+                                Math.min(
+                                    (currentTime - startTime) /
+                                    duration,
+                                    1
+                                );
+
+
+                            const current =
+                                number * progress;
+
+
+                            let display;
+
+
+                            if (
+                                originalText.includes("M") ||
+                                originalText.includes("Rs.")
+                            ) {
+
+                                if (number >= 1000000) {
+
+                                    display =
+                                        "Rs. " +
+                                        (current / 1000000)
+                                            .toFixed(1) +
+                                        "M";
+
+                                } else {
+
+                                    display =
+                                        "Rs. " +
+                                        Math.floor(current)
+                                            .toLocaleString();
+
+                                }
+
+                            } else {
+
+                                if (
+                                    originalText
+                                        .toLowerCase()
+                                        .includes("min")
+                                ) {
+
+                                    display =
+                                        Math.floor(current) +
+                                        " Min";
+
+                                } else if (
+                                    originalText
+                                        .toLowerCase()
+                                        .includes("days")
+                                ) {
+
+                                    display =
+                                        Math.floor(current) +
+                                        " Days";
+
+                                } else {
+
+                                    display =
+                                        Math.floor(current);
+
+                                }
+
+                            }
+
+
+                            element.textContent =
+                                display;
+
+
+                            if (progress < 1) {
+
+                                requestAnimationFrame(update);
+
+                            } else {
+
+                                element.textContent =
+                                    originalText;
+
+                            }
+
+                        }
+
+
+                        requestAnimationFrame(update);
+
+                        observer.unobserve(element);
+
+                    }
+
+                });
+
+            });
+
+
+        observer.observe(element);
+
+    }
+
+
+    counterElements.forEach(element => {
+        animateNumber(element);
+    });
+
+
+    /* =====================================================
+       7. IMAGE ERROR HANDLING
+    ===================================================== */
+
+    const images =
+        document.querySelectorAll("img");
+
+    images.forEach(image => {
+
+        image.addEventListener("error", function () {
+
+            this.style.opacity = "0.5";
+
+            this.alt =
+                "FreshBite Food Image";
+
+        });
+
+    });
+
+
+    /* =====================================================
+       8. CONTACT / BUSINESS SECTION
+    ===================================================== */
+
+    const contactLinks =
+        document.querySelectorAll(
+            'a[href="#contact"]'
+        );
+
+    contactLinks.forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            console.log(
+                "FreshBite contact section opened."
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       9. BACK TO TOP
+    ===================================================== */
+
+    const backToTop =
+        document.querySelector(
+            'a[href="#top"]'
+        );
+
+
+    if (backToTop) {
+
+        backToTop.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       10. ESC KEY = TOP
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       11. CURRENT YEAR
+    ===================================================== */
+
+    const footerBottom =
+        document.querySelector(".footer-bottom");
+
+
+    if (footerBottom) {
+
+        const year =
+            new Date().getFullYear();
+
+        footerBottom.innerHTML =
+            "© " +
+            year +
+            " FreshBite Food Delivery • Business Plan Project";
+
+    }
+
+
+    /* =====================================================
+       12. PAGE LOADED
+    ===================================================== */
+
+    console.log(
+        "FreshBite website loaded successfully."
+    );
+
+});
+</script>
+</body>
+</html>
